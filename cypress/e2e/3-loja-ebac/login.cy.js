@@ -37,7 +37,7 @@ describe('Funcionalidade: Login', () => {
 
     });
 
-    it.only('Deve fazer login com sucesso - Usando a massa de dados', () => {
+    it('Deve fazer login com sucesso - Usando a massa de dados', () => {
         cy.get('#username') .type(perfil.usuário)
         cy.get('#password') .type(perfil.senha)
         cy.get('.woocommerce-form > .button') .click()
@@ -45,7 +45,7 @@ describe('Funcionalidade: Login', () => {
 
     });
 
-    it.only('Deve fazer login com sucesso - Usando Fixture', () => {
+    it('Deve fazer login com sucesso - Usando Fixture', () => {
        cy.fixture('perfil').then( dados => {
         cy.get('#username') .type(dados.usuário)
         cy.get('#password') .type(dados.senha , {log: false})
